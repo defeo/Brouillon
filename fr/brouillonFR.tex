@@ -164,15 +164,15 @@ L'interêt de cette methode est que, contrairement à la première, il n'y a pas
 
 \subsection{Écosystème Android}
 Dans cette partie nous allons nous interresser à certains outils que nous fournis Android.
-
-Android étant développé en Java, et selon la devise de java \textit{\og write once, run anywhere\fg{}} il a besoin d'un machine virtuelle java pour fonctionner, en l'occurence celle d'Android se  nommait \og Dalvik \fg{}. Elle est en mesure de traiter des fichier .dex et .odex (Dalvik EXecutable et Optimized DEX) qui sont une sorte de .jar consolidé et optimisés pour Android.
+Andoid est un système d'exploitation mobile basé sur le noyau Linux et développé actuellement par Google
+Android est développé en Java, et selon la devise de java \textit{\og write once, run anywhere\fg{}} il a besoin d'un machine virtuelle java pour fonctionner, en l'occurence celle d'Android se  nommait \og Dalvik \fg{}. Elle est en mesure de traiter des fichier .dex et .odex (Dalvik EXecutable et Optimized DEX) qui sont une sorte de .jar consolidé et optimisés pour Android.
 
 depuis la version 5.0 "Lollipop" d'Android, Dalvik est entièrement remplacé par ART (Android Runtime)~\cite{ART}. ART utilise la compilation anticipée, en compilant l'application à son installation, sans besoin ultérieur d'interprétation. ART permet ainsi d'augmenter les performances, donc d'augmenter la durée de vie de la batterie. De plus les allocations mémoires sont plus efficace. Dans un soucis de rétro-compatibilité, ART utilise toujours des fichiers .dex, mais pas de .odex, qu'il remplace par des fichier ELF (Executable and Linkable Format)
 
 Il est important de noter qu'une application Android se présentera toujours sous forme d'une archive .apk. Cette archive contiendra entre autres le fichier AndroidManifest.xml sur lequel nous nous attarderons par la suite, un fichier classes.dex et enfin les ressources de l'application c'est à dire les images, musiques et autres éléments nécessaire à l'application.
 
 \subsubsection{Intents}
-Les intents sont un format de message d'action spécifique à Android. Un intent est composé de plusieurs champs : 
+Les intents sont un format d'évenements spécifique à Android. Un intent est composé de plusieurs champs : 
 \begin{itemize}
 \item un champ \textit{action} qui défini quel type d'action sera à executer
 \item un champ \textit{data} qui contiens les éventuelles données nécessaire à l'action
